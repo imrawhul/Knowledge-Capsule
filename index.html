@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knowledge Capsule</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         @font-face {
             font-family: 'hermes';
@@ -38,30 +43,57 @@
         }
 
         .custom-bullets {
-            list-style-image: url('https://freeimage.host/"><img src="https://iili.io/dgoxe2f.png');
+            list-style-image: url('/Assets/Bullet.svg');
             ;
         }
+
+        .text {
+            font-size: 1vw;
+        }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body class="flex justify-center items-center font-[hermes] w-screen h-screen">
+<body class="box-border flex justify-center items-center font-[hermes] w-screen h-screen  bg-slate-900 p-20">
 
-    <div
-        class="relative sm:px-6 w-[30rem] aspect-[3/4] rounded-sm  bg-[url('https://iili.io/dgnx89p.png')] bg-contain bg-center bg-no-repeat  m-12 px-4 ">
-        <h1 class=" text-center font-bold uppercase screen text-[4vw] sm:text-2xl mt-[16%]">Air Suspended Seat</h1>
-        <p class="text-gray-800 py-3 text ">• Air Suspended Seats for the Tippers & Tractors models
+    <div id="toExport"
+        class="relative overflow-hidden  aspect-[3/4] rounded-sm  bg-[url('/Assets/KC.png')] bg-cover bg-center bg-no-repeat w-1/2  px-[2vw] mr-[2vw] ">
+
+        <!-- Title here -->
+        <div class="mb-[.15vw]">
+            <h1 id="title" class="flex justify-center font-bold uppercase relative text-[2.4vw] mt-[16%]">Title
+                <span id="hBg"
+                    class=" before:block  before:absolute before:inset-[.1rem] before:skew-x-[-8deg] before:bg-red-600 relative ml-[.3vw]">
+                    <span id="hTitle" class="relative text-white px-[.6vw]  ">
+                        Goes Here
+                    </span>
+                </span>
+
+            </h1>
+            <!-- Full Form -->
+            <div class="text-[1.2vw] flex justify-center text-gray-600" id="cfForm">
+                <span>( &nbsp</span>
+                <h2 id="fForm" class="capitalize">Full Form</h2>
+                <span>&nbsp )</span>
+            </div>
+        </div>
+
+        <!-- Desc. here -->
+        <p id="desc" class="text-gray-800 text py-1 ">• Air Suspended Seats for the Tippers & Tractors models
             <br>
             • With the help of Air Suspended Seats, drivers will experience higher comfort, thereby resulting in
             longer driving hours for enhanced productivity. </br>
         </p>
 
+
+        <!-- Image -->
         <div
-            class="py-3 mx-auto border flex justify-center items-center bg-white border-gray-300 rounded-lg md:rounded-xl h-[30%] w-[70%]  overflow-hidden shadow-lg">
-            <img class="object-cover w-[60%] " src="https://iili.io/dgnuRJj.md.png" alt="">
+            class="my-[.5vw] mx-auto border flex justify-center items-center bg-white border-gray-300 rounded-lg md:rounded-xl  w-[24vw] h-[16vw]  overflow-hidden shadow-lg">
+            <img class="object-cover w-[14vw] " src="Assets/img.png" alt="" id="pic">
         </div>
 
-        <h2 class="text my-[5%] "><span class="font-bold text-[#083a81]">Applicable
+        <!-- img text -->
+        <h2 id="desc2" class="text mt-[1.6vw] mb-[1vw] text "><span class="font-bold text-[#083a81]">Applicable
                 Models-
             </span>Pro 8035XM, Pro 6028T,
             Pro 6035T/HRT,
@@ -70,18 +102,157 @@
             6055XP
         </h2>
 
-        <h3
-            class="uppercase font-bold text-white w-full bg-[#083a81] absolute left-0 pl-4 py-[0.8%] text-[2.5vw] md:text-[1rem]">
+        <!-- Benefits -->
+        <h3 class="uppercase font-bold text-white w-full bg-[#083a81] absolute left-0 pl-[2vw]  text-[2vw]  ">
             Benefits
         </h3>
-        <ul class="sm:mt-[9vh] mt-[14%] custom-bullets">
-            <li class="text"><b>Adjustable dampener: </b>Enables stiffness adjustment</li>
-            <li class="text"><b>Integrated seat belt: </b>With enhanced safety, comfort & ease of usage</li>
-            <li class="text"><b>Heavy duty slider: </b>For demanding applications, providing comfortable seating</li>
-            <li class="text"><b>Quick dump lever: </b>Complete deflation through single switch operation</li>
+        <ul class=" custom-bullets text top-[3.5vw] relative">
+            <li class=""><b>Adjustable dampener: </b>Enables stiffness adjustment</li>
+            <li class=""><b>Integrated seat belt: </b>With enhanced safety, comfort & ease of usage</li>
+            <li class=""><b>Heavy duty slider: </b>For demanding applications, providing comfortable seating</li>
+            <li class=""><b>Quick dump lever: </b>Complete deflation through single switch operation</li>
         </ul>
     </div>
 
+    <!-- control starts here!! -->
+    <div class="w-1/2 bg-slate-700 p-[2vw] text-white ml-[2vw] text-sm rounded">
+        <!-- Title -->
+        <div class="text-[2.5vw] text-center mb-5 font-bold ">Change Content Here</div>
+        <!-- Highlighted Title -->
+        <div class="flex w-full">
+            <input type="text" autocomplete="off" placeholder="Title Here"
+                class="outline-none pl-2 py-1 focus:border focus:border-green-400  text-black  basis-1/2 " id="iTitle">
+            <input type="text" autocomplete="off" placeholder="Highlighted Title Here"
+                class="outline-none pl-2 py-1 focus:border focus:border-green-400  text-black ml-2 basis-1/2"
+                id="ihTitle">
+        </div>
+        <!-- Full form -->
+        <input type="text" placeholder="Sub-Heading"
+            class="outline-none pl-2 py-1 focus:border focus:border-green-400  text-black w-full mt-4" id="ifForm">
+
+        <!-- Description -->
+        <textarea name="" id="iDesc"
+            class="outline-none pl-2 py-1 focus:border focus:border-green-400  text-black w-full mt-4"
+            placeholder="Enter description here.."></textarea>
+
+        <input type="file" accept=".jpeg, .jpg, .png .webp" src="" alt="" id="iPic">
+
+        <input type="text" placeholder="Title Here"
+            class="outline-none pl-2 py-1 focus:border focus:border-green-400  text-black w-full mt-4">
+
+
+        <!-- Buttons -->
+        <div class=" flex justify-between ">
+            <div
+                class="group text-center mt-4 cursor-pointer bg-green-600 p-1.5 w-32 rounded transition ease-in-out active:translate-y-1  hover:bg-green-700 duration-300">
+                <input type="button" id="sbmt" value="Submit" class="cursor-pointer group">
+                <i
+                    class=" fa-solid fa-arrow-right text-white px-2 group-hover:translate-x-2 group-active:duration-100 transition ease-in-out delay-150"></i>
+            </div>
+
+
+
+            <input type="button" id="sbmt" value="Bold"
+                class="mt-4 cursor-pointer bg-blue-600 p-1.5 w-24 rounded transition ease-in-out active:translate-y-1  active:bg-blue-700 active:font-bold duration-100 ">
+
+
+            <div
+                class="group text-center mt-4 cursor-pointer bg-red-600 p-1.5 w-24 rounded transition ease-in-out active:translate-y-1  hover:bg-red-700 duration-300">
+                <input type="button" id="clr" value="Reset" class="cursor-pointer group">
+                <i
+                    class="fa-solid fa-eraser text-white px-2 group-hover:translate-x-2 group-active:duration-100 transition ease-in-out delay-150"></i>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        let title = document.getElementById('title')
+        let hTitle = document.getElementById('hTitle')
+        let desc = document.getElementById('desc')
+        let iTitle = document.getElementById('iTitle')
+        let ihTitle = document.getElementById('ihTitle')
+        let iDesc = document.getElementById('iDesc')
+        let sbmt = document.getElementById('sbmt')
+        let clr = document.getElementById('clr')
+        let hBg = document.getElementById('hBg')
+        let fForm = document.getElementById('fForm')
+        let ifForm = document.getElementById('ifForm')
+        let cfForm = document.getElementById('cfForm')
+        let pic = document.getElementById('pic')
+        let iPic = document.getElementById('iPic')
+
+        clr.onclick = function () {
+            iTitle.value = ''
+            ihTitle.value = ''
+            iDesc.value = ''
+            ifForm.value = ''
+            title.childNodes[0].nodeValue = 'Title'
+            hTitle.innerHTML = 'Here'
+            desc.innerHTML = 'Description Here..'
+            fForm.innerHTML = 'Full Form Here'
+            pic.src = ('https://4.img-dpreview.com/files/p/E~TS590x0~articles/3925134721/0266554465.jpeg')
+
+
+        }
+
+
+        sbmt.onclick = function () {
+
+
+            title.childNodes[0].nodeValue = iTitle.value
+            desc.innerHTML = iDesc.value
+            if (ihTitle.value == '') {
+                hBg.style.display = 'none'
+
+            }
+            else {
+                hTitle.innerHTML = ihTitle.value
+                hBg.style.display = 'block'
+
+            }
+
+
+            if (ifForm.value == '') {
+                cfForm.style.display = 'none'
+
+            }
+            else {
+                fForm.innerHTML = ifForm.value
+                cfForm.style.display = 'inlineblock'
+
+            }
+
+            let file = iPic.files[0]
+            if (file) {
+                let reader = new FileReader()
+
+                reader.onload = function (event) {
+                    pic.src = event.target.result
+                }
+                reader.readAsDataURL(file);
+            }
+            else {
+                alert("No image uploaded")
+            }
+        }
+
+
+
+
+
+    </script>
 </body>
 
 </html>
